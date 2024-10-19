@@ -5,7 +5,7 @@ function index()
 	if not nixio.fs.access("/etc/config/autotimeset") then
 		return
 	end
-        entry({"admin", "control"}, firstchild(), "Control", 44).dependent = false
+        entry({"admin", "control"}, firstchild(), "控制", 44).dependent = false
         entry({"admin", "control", "autotimeset"}, alias("admin", "control", "autotimeset", "base"), _("Scheduled Setting"), 20).dependent = true
         entry({"admin", "control", "autotimeset", "base"}, cbi("autotimeset/base"),  _("Scheduled Setting"), 1).leaf = true
         entry({"admin", "control", "autotimeset", "log"}, form("autotimeset/log"), _("Log"), 2).leaf = true
