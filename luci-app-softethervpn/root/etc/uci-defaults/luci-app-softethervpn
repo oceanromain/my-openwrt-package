@@ -16,7 +16,7 @@ uci -q batch <<-EOF >/dev/null
 EOF
 
 /etc/init.d/softethervpnserver stop
-/etc/init.d/softethervpnserver disable
+/etc/init.d/softethervpnserver enable
 
 rm -rf /tmp/luci-*cache
 exit 0
